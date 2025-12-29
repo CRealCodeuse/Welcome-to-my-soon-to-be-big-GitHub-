@@ -1,5 +1,5 @@
 // Sélectionner l'élément
-const nomPrenom = document.querySelector('.NomPrénom a'); // Sélectionner le lien dans l'élément avec la classe 'NomPrénom'
+const nomPrenom = document.querySelector('.NomPrénom'); // Sélectionner le lien dans l'élément avec la classe 'NomPrénom'
 let clickCount = 0; // Initialisation du compteur de clics
 const clicksRequired1 = 1; // Nombre de clics nécessaires
 const clicksRequired3 = 3; // Nombre de clics nécessaires
