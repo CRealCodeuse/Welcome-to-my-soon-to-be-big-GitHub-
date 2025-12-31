@@ -111,7 +111,7 @@ p{
 
 /*PROJET 1 : PIPOUNES CREATION*/
 
-.gridContainer1{ /*Projet 1*/
+.divPipCreation{ /*Projet 1*/
     display: grid; /*disposition en grille*/
     grid-template-columns: 50% 50%; /*taille des colonnes*/
     grid-template-rows: flex flex; /*la grille s'adapte à la taille du plus grand des items*/
@@ -136,7 +136,7 @@ p{
 
 /*PROJET 2 : TIMER ANTI DISTRACTIONS*/
 
-.grid-container2{ /*Projet 2*/
+.divToDoList{ /*Projet 2*/
     display: grid; /*disposition en grille*/
     grid-template-columns: 50% 50%; /*taille des colonnes*/
     grid-template-rows: flex flex; /*la grille s'adapte à la taille du plus grand des items*/
@@ -148,7 +148,7 @@ p{
 
 /*PROJET 3 : A VENIR ...*/
 
-.grid-container3{
+.divProjet3{
     display: grid; /*disposition en grille*/
     grid-template-columns: 50% 50%; /*taille des colonnes*/
     grid-template-rows: flex flex; /*la grille s'adapte à la taille du plus grand des items*/
