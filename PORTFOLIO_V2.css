@@ -18,7 +18,7 @@ h2, h4 {
 }
 
 body{  /*Propriétés du corps de page*/
-    background-color: #fff3f3; /*couleur de fond du corps de page*/
+    background-color: #f5e6e6; /*couleur de fond du corps de page*/
     font-family: "Oswald", sans-serif; /*police et style d'écriture*/
     font-weight: 300; /*Epaisseur de police*/
     font-style: normal;
@@ -27,24 +27,35 @@ body{  /*Propriétés du corps de page*/
 
 /**********************************HEADER**************************************/
 
-header{ /*Propriétés du haut de page*/
-    background-color: #f1aaaf; /*couleur de fond du haut de page*/
-    padding: 5px; /*espace entre le texte et la bordure*/
-    text-align:center; /*alignement du texte*/
-    margin: 0 0 10px 0; /*espace autour de la bordure*/
+header {
+    background-color: #f1aaaf; /*couleur de fond de l'en-tête*/
+    padding: 5px; /*espace autour de l'en-tête*/
+    margin: 0 0 20px 0; /*espace en dessous de l'en-tête*/
+    box-shadow: 5px 10px 5px grey; /*ombre portée de l'en-tête*/
+    display: flex; /*Utilisation de Flexbox*/
+    flex-direction: column; /* Empilement vertical */
+    align-items: center; /* Centre tout horizontalement */
 }
 
 .NomPrénom {
-    font-size: 40px; /*taille de la police*/
     font-family: "Oswald", sans-serif; /*police et style d'écriture*/
     font-weight: 800; /*Epaisseur de police*/
-    font-style: normal;
-    
+    font-style: normal; /*Style de police*/
+}
+
+.English {
+    align-self: flex-end; /* Aligne uniquement le bouton à droite */
+    margin-right: 20px; /* Espace depuis le bord droit */
+    font-size: 20px; /*taille de la police*/
+    border: black 2px solid; /*bordure du bouton*/
+    background-color: white; /*couleur de fond du bouton*/
+    font-family: "Oswald", sans-serif; /*police et style d'écriture*/
 }
 
 /***********************************BODY**************************************/
 
 .divPresentation {
+    margin: 0 20px 0 20px;
     padding: 0 0 0 20px ;
     border: 3px solid darkgrey;
     box-shadow: 5px 5px 5px grey;
@@ -70,7 +81,7 @@ header{ /*Propriétés du haut de page*/
     background-color: #f6b1b1; /*couleur de fond de la grille*/
     padding: 10px 0 10px 0 ; /*marge autour de la grille*/
     border: 2px solid #f05454; /*bordure de la grille*/
-    box-shadow: 10px 15px 5px rgb(192, 83, 83); /*ombre portée de la grille*/
+    box-shadow: 10px 10px 5px rgb(192, 83, 83); /*ombre portée de la grille*/
 }
 
 .grid-item{
@@ -95,19 +106,31 @@ header{ /*Propriétés du haut de page*/
     background-color: #f6b1b1; /*couleur de fond de la grille*/
     margin: 30px 0 10px 0 ; /*marge autour de la grille*/
     border: 2px solid #f05454; /*bordure de la grille*/
-    box-shadow: 10px 15px 5px rgb(192, 83, 83); /*ombre portée de la grille*/
+    box-shadow: 10px 10px 5px rgb(192, 83, 83); /*ombre portée de la grille*/
 }
 
-/*PROJET 3 : A VENIR ...*/
+/*PROJET 3 : TIC TAC TOE ...*/
 
-.divProjet3{
+.divTicTacToe{ /*Projet 3*/
     display: grid; /*disposition en grille*/
     grid-template-columns: 50% 50%; /*taille des colonnes*/
     grid-template-rows: flex flex; /*la grille s'adapte à la taille du plus grand des items*/
     background-color: #f6b1b1; /*couleur de fond de la grille*/
     margin: 30px 0 10px 0 ; /*marge autour de la grille*/
     border: 2px solid #f05454; /*bordure de la grille*/
-    box-shadow: 10px 15px 5px rgb(192, 83, 83); /*ombre portée de la grille*/
+    box-shadow: 10px 10px 5px rgb(192, 83, 83); /*ombre portée de la grille*/
+}
+
+/*PROJET 4 : AMELIORATION SITE CAF - En construction*/
+
+.divSiteCAF{ /*Projet 4*/
+    display: grid; /*disposition en grille*/
+    grid-template-columns: 50% 50%; /*taille des colonnes*/
+    grid-template-rows: flex flex; /*la grille s'adapte à la taille du plus grand des items*/
+    background-color: #f6b1b1; /*couleur de fond de la grille*/
+    margin: 30px 0 10px 0 ; /*marge autour de la grille*/
+    border: 2px solid #f05454; /*bordure de la grille*/
+    box-shadow: 10px 10px 5px rgb(192, 83, 83); /*ombre portée de la grille*/
 }
 
 /***************COMPETENCES ET OUTILS UTILISES******************/
