@@ -1,4 +1,4 @@
-![Hello Image](<PortfolioImages/Image - Hello.png>)
+![Hello Image](<Image - Hello.png>)
 
 🤩 HEY THERE ! Welcome on my GitHub !
 
@@ -9,7 +9,7 @@
 💼 There you can see projects I coded or working on currently.
 🔗 NB : My portfolio now has a web domain, I'm just working on the files and folders needed on the app.
 
-![Coding](<PortfolioImages/Image - Programmation.jpg>)
+![Coding](<Image - Programmation.jpg>)
 
 ✅​ LANGUAGES I WORK WITH : 
 - HTML, CSS : Basic but needed so I put it everywhere.
