@@ -10,7 +10,7 @@
 
 🔗 LINKS to my PORTFOLIO and my LINKEDIN are both on my profile.
 
-![Image coding](<Image - Programmation.jpg>)
+![Image Coding](<Image - Coding.png>)
 
 ✅​ LANGUAGES I WORK WITH : 
 - HTML, CSS : Basic but needed so I put it everywhere.
