@@ -30,6 +30,7 @@ header { /*Propriétés de l'en-tête*/
     top: 0; /*position en haut de la page*/
     vertical-align: middle;
     border: white 2px solid;
+    border-radius: 5px;
 }
 
 .Accueil { /*Bouton Accueil*/
@@ -158,15 +159,15 @@ header { /*Propriétés de l'en-tête*/
 }
 
 .ImageLogement {
-    background-color: lightgreen;
+    background-color: #EFE3D3;
 }
 
 .ImageHandicap {
-    background-color: violet;
+    background-color: rgb(233, 231, 138);
 }
 
 .ImageAccident {
-    background-color: lightcoral;
+    background-color: #6fdfc3;
 }
 
 /* ACTIONS */
@@ -195,3 +196,71 @@ header { /*Propriétés de l'en-tête*/
     border-radius: 50px;
     color: white;
 }
+
+/*MAGASINE*/
+
+.divMagasine {
+    margin: 30px 20px 0 20px;
+    padding: 5px 20px 10px 20px;
+    border: none;
+    background-color: #e3e3f1;
+    box-shadow: 10px 10px 20px grey; /*ombre portée des informations*/
+    border-radius: 15px; /*bords arrondis*/
+}
+
+.PresentationMagasine {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.CategorieMagasine {
+    background-color: #141455;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 200px;
+    text-align: center;
+    display: block;
+    margin: 10 auto;
+}
+
+.ImageMagasine {
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.LogoArticle {
+    display: flex;
+    align-items: center;
+    background-color: #e3e3f1;
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.ImageLogoArticle {
+    width: 40px;
+    height: 40px;
+}
+
+.TitreArticle {
+    background-color: #141455;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.TexteArticle {
+    background-color: #e3e3f1;
+    border: none;
+    border-radius: 5px;
+}
+
+/*QUESTIONS*/
+
