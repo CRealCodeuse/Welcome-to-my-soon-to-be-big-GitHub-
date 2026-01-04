@@ -1,7 +1,55 @@
-//TRADUCTION FRANCAIS/ANGLAIS
+//VARIABLES DES BOUTONS DU FORMULAIRE DE CONTACT
+const BoutonContact = document.querySelector('.BoutonContact');
+const PopUp = document.querySelector('.PopUp');
+const Fermer = document.querySelector('.Fermer');
+const FormulaireContact = document.querySelector('.FormulaireContact')
+
+//OUVRIR POP UP DE CONTACT
+BoutonContact.addEventListener('click', () => {
+   PopUp.style.display = 'block'; 
+});
+
+//FERMER POP UP DE CONTACT
+Fermer.addEventListener('click', () => {
+   PopUp.style.display = 'none'; 
+});
+
+//FERMER POP UP EN CLIQUANT EN DEHORS DE CELLE-CI
+window.addEventListener('click', (e) => {
+    if (e.target === PopUp) {
+        PopUp.style.display = 'none';
+    }
+});
+
+//ENVOI DU FORMULAIRE
+FormulaireContact.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Récupérer les valeurs
+    const nom = document.querySelector('.Nom').value;
+    const prenom = document.querySelector('.Prenom').value;
+    const email = document.querySelector('.Email').value;
+    const message = document.querySelector('.Message').value;
+    
+    // Créer le lien mailto
+    const mailtoLink = `mailto:elise.degardin.mtd@gmail.com?body=${encodeURIComponent(
+        `Nom: ${nom}\nPrénom: ${prenom}\nEmail: ${email}\n\nMessage:\n${message}`
+    )}`;
+    
+    // Ouvrir le client mail
+    window.location.href = mailtoLink;
+    
+    // Fermer la pop-up et réinitialiser le formulaire
+    PopUp.style.display = 'none';
+    FormulaireContact.reset();
+
+});
+
+//VARIABLES TRADUCTION FRANCAIS/ANGLAIS
 const button = document.querySelector('.English');
 let isTranslated = false;
 
+//ACTIONS DU BOUTON DE TRADUCTION
 button.addEventListener('click', function() {
     const translations = {
         // Header

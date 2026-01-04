@@ -22,10 +22,52 @@
 
 <body>
     
-    <button class="English">
-        <img class="FlagEngland" src="PorfImages\Flag - England.png" alt="England" width="20px" height="15px">
-        English
-    </button>
+    <div class="HeadButtons">
+
+        <button class="BoutonContact">
+            <img class="IconeBulle" src="PorfImages/Icone - Bulle.png" alt="Icone Bulle" height="25px">
+        Me contacter
+        </button>
+
+        <button class="English">
+            <img class="FlagEngland" src="PorfImages\Flag - England.png" alt="England" width="20px" height="15px">
+            English
+        </button>
+
+    </div>
+    
+
+    <div class="PopUp">
+
+        <div class="ContenuPopUp">
+
+            <span class="Fermer">&times;</span>
+
+            <h2 class="TitrePopUp">
+                Si vous souhaitez me contacter, c'est ici !
+            </h2>
+
+            <form class="FormulaireContact">
+
+                <label for="Nom">Nom :</label>
+                <input type="text" class="Nom" name="Nom" required>
+
+                <label for="Prenom">Prénom :</label>
+                <input type="text" class="Prenom" name="Prenom" required>
+
+                <label for="Email">Email :</label>
+                <input type="email" class="Email" name="Email" required>
+
+                <label for="Message">Message :</label>
+                <textarea type="message" class="Message" name="Message" rows="5" required></textarea>
+
+                <button type="submit">Envoyer</button>
+
+            </form>
+
+        </div>
+
+    </div>
 
     <div class="divPresentation">
 
