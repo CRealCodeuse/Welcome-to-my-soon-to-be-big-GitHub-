@@ -1,266 +1,657 @@
-/*GENERAL*/
+/*===================================
+  GENERAL
+===================================*/
 
-body { /*Propriétés du corps de page*/
-    font-family: 'Oswald', sans-serif; /*police et style d'écriture*/
-    background-color: rgb(213, 220, 226); /*couleur de fond de la page*/
-    
+body { 
+    font-family: 'Oswald', sans-serif; /* Police et style d'écriture */
+    background-color: rgb(213, 220, 226); /* Couleur de fond de la page */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
 }
 
-h1, h2, h3, h4, h5, h6 { /*Propriétés des titres*/
-    padding: 0 10px 0 10px; /*espace autour des titres*/
+h1, h2, h3, h4, h5, h6 { 
+    padding: 0 10px; /* Espace autour des titres */
 }
 
-p{ 
-    padding: 0 20px 0 20px; /*espace autour des paragraphes*/
-    font-size: 20px;
+p { 
+    padding: 0 20px; /* Espace autour des paragraphes */
+    font-size: 20px; /* Taille de la police */
 }
 
-a{
-    text-decoration: none;
-    color: black;
+a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: black; /* Couleur des liens */
 }
 
-/*HEADER*/
+/*===================================
+  HEADER
+===================================*/
 
-header { /*Propriétés de l'en-tête*/
-    font-family: 'Oswald', sans-serif; /*police et style d'écriture*/
-    background-color: #141455; /*couleur de fond*/
-    padding: 15px 10px 15px 10px; /*espace autour de l'en-tête*/
-    position: sticky; /*position fixe*/
-    top: 0; /*position en haut de la page*/
-    vertical-align: middle;
-    border: white 2px solid;
-    border-radius: 5px;
+header { 
+    font-family: 'Oswald', sans-serif; /* Police et style d'écriture */
+    background-color: #141455; /* Couleur de fond */
+    padding: 15px 10px; /* Espace autour de l'en-tête */
+    position: sticky; /* Position fixe lors du scroll */
+    top: 0; /* Position en haut de la page */
+    vertical-align: middle; /* Alignement vertical */
+    border: white 2px solid; /* Bordure blanche */
+    border-radius: 5px; /* Bords arrondis */
+    z-index: 1000; /* S'assure que le header reste au-dessus */
 }
 
-.Accueil { /*Bouton Accueil*/
-    color: white; /*couleur du texte*/
-    font-family: 'Oswald', sans-serif;
-    text-decoration: none; /*décoration du texte*/
-    font-size: 25px; /*taille de la police*/
-    padding: 0 10px 0 10px; /*espace autour du texte*/
-    
+.Accueil { 
+    color: white; /* Couleur du texte */
+    font-family: 'Oswald', sans-serif; /* Police */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 25px; /* Taille de la police */
+    padding: 0 10px; /* Espace autour du texte */
 }
 
-.Malvoyant { /*Bouton Malvoyant*/
-    background-color: #141455 ; /*couleur de fond*/
-    border: none; /*bordure*/
-    padding: 0 10px 0 10px; /*espace autour du texte*/
+/* Responsive : Réduction de la taille sur petits écrans */
+@media (max-width: 768px) {
+    .Accueil {
+        font-size: 20px; /* Taille réduite pour tablettes */
+    }
 }
 
-.Connexion { /*Bouton Connexion*/
-    background-color: #141455 ; /*couleur de fond*/
-    border: none; /*bordure*/
-    padding: 0 10px 15px 10px; /*espace autour du texte*/
-    float: right; /*position à droite*/
-    margin-left: 10px; /
+@media (max-width: 480px) {
+    .Accueil {
+        font-size: 18px; /* Taille réduite pour mobiles */
+    }
 }
 
-.Recherche { /*Bouton Recherche*/
-    background-color: #141455 ; /*couleur de fond*/
-    border: none; /*bordure*/
-    padding: 0 10px 0 10px; /*espace autour du texte*/
-    float: inline-end; /*position à droite*/
-    margin-left: auto; /*espace automatique à gauche*/
+.Malvoyant { 
+    background-color: #141455; /* Couleur de fond */
+    border: none; /* Pas de bordure */
+    padding: 0 10px; /* Espace autour du texte */
 }
 
-/*BODY*/
+.Connexion { 
+    background-color: #141455; /* Couleur de fond */
+    border: none; /* Pas de bordure */
+    padding: 0 10px 15px 10px; /* Espace autour du texte */
+    float: right; /* Position à droite */
+    margin-left: 10px; /* Espace à gauche */
+}
 
-/* DESCRIPTION */
+.Recherche { 
+    background-color: #141455; /* Couleur de fond */
+    border: none; /* Pas de bordure */
+    padding: 0 10px; /* Espace autour du texte */
+    float: inline-end; /* Position à droite */
+    margin-left: auto; /* Espace automatique à gauche */
+}
+
+/*===================================
+  BODY - DESCRIPTION
+===================================*/
 
 .TitreDescription {
-    background-color: #141455;
-    color: white;
-    border-radius: 20px;
-    text-align: center;
+    background-color: #141455; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border-radius: 20px; /* Bords arrondis */
+    text-align: center; /* Centre le texte */
 }
 
 .DescriptionSite {
-    padding: 5px 15px; /*espace autour de la description*/
-    background-color: #e3e3f1; /*couleur de fond de la description*/
-    margin: 30px 20px 20px 20px; /*marge autour de la description*/
-    border: none; /*bordure de la description*/               /*2px solid #5e5e5e*/
-    box-shadow: 10px 10px 20px grey; /*ombre portée de la description*/
-    border-radius: 15px; /*bords arrondis*/
+    padding: 5px 15px; /* Espace autour de la description */
+    background-color: #e3e3f1; /* Couleur de fond de la description */
+    margin: 30px 20px 20px 20px; /* Marge autour de la description */
+    max-width: calc(100% - 40px); /* S'adapte à la largeur de l'écran */
+    border: none; /* Pas de bordure */
+    box-shadow: 10px 10px 20px grey; /* Ombre portée de la description */
+    border-radius: 15px; /* Bords arrondis */
+    box-sizing: border-box; /* Inclut padding et border dans la width */
+}
+
+/* Responsive : Réduction des marges sur petits écrans */
+@media (max-width: 768px) {
+    .DescriptionSite {
+        margin: 20px 15px; /* Marges réduites pour tablettes */
+        padding: 10px; /* Padding réduit */
+    }
+}
+
+@media (max-width: 480px) {
+    .DescriptionSite {
+        margin: 15px 10px; /* Marges réduites pour mobiles */
+        padding: 8px; /* Padding réduit */
+    }
 }
 
 .TexteDescription {
-    background-color: white;
-    border: none;
-    border-radius: 5px;
+    background-color: white; /* Couleur de fond */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bords arrondis */
 }
 
-/* INFORMATIONS */
+/*===================================
+  INFORMATIONS
+===================================*/
 
-.Informations { /*Propriétés des informations*/
-    padding: 5px 15px; /*espace autour des informations*/
-    background-color: #e3e3f1; /*couleur de fond des informations*/
-    margin: 30px 20px 20px 20px; /*marge autour des informations*/
-    border: none; /*bordure des informations*/
-    box-shadow: 10px 10px 20px grey; /*ombre portée des informations*/
-    border-radius: 15px; /*bords arrondis*/
-    display: flex;
+.Informations { 
+    padding: 5px 15px; /* Espace autour des informations */
+    background-color: #e3e3f1; /* Couleur de fond des informations */
+    margin: 30px 20px 20px 20px; /* Marge autour des informations */
+    max-width: calc(100% - 40px); /* S'adapte à la largeur de l'écran */
+    border: none; /* Pas de bordure */
+    box-shadow: 10px 10px 20px grey; /* Ombre portée des informations */
+    border-radius: 15px; /* Bords arrondis */
+    display: flex; /* Utilise Flexbox */
+    flex-wrap: wrap; /* Permet le passage à la ligne sur petits écrans */
+    box-sizing: border-box; /* Inclut padding et border dans la width */
+}
+
+/* Responsive : Réduction des marges sur petits écrans */
+@media (max-width: 768px) {
+    .Informations {
+        margin: 20px 15px; /* Marges réduites pour tablettes */
+        padding: 10px; /* Padding réduit */
+    }
+}
+
+@media (max-width: 480px) {
+    .Informations {
+        margin: 15px 10px; /* Marges réduites pour mobiles */
+        padding: 8px; /* Padding réduit */
+        flex-direction: column; /* Empile verticalement sur mobile */
+    }
 }
 
 .Informations h1 {
-    text-align: center;
-    background-color: #141455;
-    color: white;
-    border-radius: 20px;
+    text-align: center; /* Centre le texte */
+    background-color: #141455; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border-radius: 20px; /* Bords arrondis */
+    width: 95%; /* Prend toute la largeur */
 }
 
 .imageInformation {
-    padding-left: 90px;
-    padding-bottom: 15px;
+    padding-left: 100px; /* Espace à gauche de l'image */
+    padding-bottom: 15px; /* Espace en bas de l'image */
+}
+
+/* Responsive : Réduction du padding sur petits écrans */
+@media (max-width: 768px) {
+    .imageInformation {
+        padding-left: 40px; /* Padding réduit pour tablettes */
+    }
+}
+
+@media (max-width: 480px) {
+    .imageInformation {
+        padding-left: 10px; /* Padding réduit pour mobiles */
+        text-align: center; /* Centre l'image */
+    }
+    
+    .imageInformation img {
+        max-width: 100%; /* L'image ne dépasse pas son conteneur */
+        height: auto; /* Garde les proportions */
+    }
 }
 
 .Information {
-    font-family: 'Oswald', regular;
-    font-size: 15px;
-    margin: 10px 0 10px 15px;
-    width: 500px;
-    border: none;
-    border-radius: 5px;
-    background-color: white;
-    
+    font-family: 'Oswald', sans-serif; /* Police */
+    font-size: 15px; /* Taille de la police */
+    margin: 10px 0 10px 15px; /* Marges autour de l'information */
+    width: 100%; /* Prend toute la largeur disponible */
+    max-width: 500px; /* Largeur maximale */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bords arrondis */
+    background-color: white; /* Couleur de fond */
+    box-sizing: border-box; /* Inclut padding et border dans la width */
 }
 
-/* SERVICES */
+/* Responsive : Adaptation de la largeur sur différents écrans */
+@media (max-width: 768px) {
+    .Information {
+        width: 90%; /* 90% de la largeur sur tablettes */
+        max-width: 100%; /* Supprime la limite de 500px */
+        margin: 10px auto; /* Centre l'élément */
+        font-size: 14px; /* Taille de police réduite */
+    }
+}
+
+@media (max-width: 480px) {
+    .Information {
+        width: 95%; /* 95% de la largeur sur mobiles */
+        margin: 10px auto; /* Centre l'élément */
+        font-size: 13px; /* Taille de police réduite */
+    }
+}
+
+.Information:hover {
+    background-color: #141455; /* Couleur de fond au survol */
+    color: white; /* Couleur du texte au survol */
+}
+
+/*===================================
+  SERVICES
+===================================*/
 
 .divServices {
-    margin: 30px 20px 0 20px;
-    padding: 5px 20px 10px 20px;
-    border: none;
-    background-color: #e3e3f1;
-    box-shadow: 10px 10px 20px grey; /*ombre portée des informations*/
-    border-radius: 15px; /*bords arrondis*/
+    margin: 30px 20px 0 20px; /* Marge autour de la div */
+    max-width: calc(100% - 40px); /* S'adapte à la largeur de l'écran */
+    padding: 0px 20px 10px 20px; /* Espace interne */
+    border: none; /* Pas de bordure */
+    background-color: #e3e3f1; /* Couleur de fond */
+    box-shadow: 10px 10px 20px grey; /* Ombre portée */
+    border-radius: 15px; /* Bords arrondis */
+    box-sizing: border-box; /* Inclut padding et border dans la width */
+}
+
+/* Responsive : Réduction des marges sur petits écrans */
+@media (max-width: 768px) {
+    .divServices {
+        margin: 20px 15px 0; /* Marges réduites pour tablettes */
+        padding: 0 15px 10px; /* Padding réduit */
+    }
+}
+
+@media (max-width: 480px) {
+    .divServices {
+        margin: 15px 10px 0; /* Marges réduites pour mobiles */
+        padding: 0 10px 10px; /* Padding réduit */
+    }
 }
 
 .ViePersonnelle, .VieProfessionnelle, .Logement, .Handicap, .Accident {
-    text-align: center;
+    text-align: center; /* Centre le texte */
+}
+
+.pServices {
+    background-color: #e3e3f1; /* Couleur de fond */
+    color: #141455; /* Couleur du texte */
+    border-radius: 10px; /* Bords arrondis */
 }
 
 .ImageViePersonnelle, .ImageVieProfessionnelle, .ImageLogement, .ImageHandicap, .ImageAccident {
-    padding-top: 15px;
+    display: flex; /* Utilise Flexbox */
+    flex-wrap: wrap; /* Permet au h2 de passer en dessous */
+    align-items: center; /* Aligne verticalement les éléments */
+    gap: 20px; /* Espace entre les éléments */
+    justify-content: center; /* Centre les éléments horizontalement */
+    padding-top: 10px; /* Espace en haut */
+    padding-bottom: 10px; /* Espace en bas */
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+/* Responsive : Réduction du gap sur petits écrans */
+@media (max-width: 768px) {
+    .ImageViePersonnelle, .ImageVieProfessionnelle, .ImageLogement, .ImageHandicap, .ImageAccident {
+        gap: 15px; /* Gap réduit pour tablettes */
+    }
+}
+
+@media (max-width: 480px) {
+    .ImageViePersonnelle, .ImageVieProfessionnelle, .ImageLogement, .ImageHandicap, .ImageAccident {
+        gap: 10px; /* Gap réduit pour mobiles */
+        flex-direction: column; /* Empile les éléments verticalement */
+    }
+    
+    .ImageViePersonnelle img, .ImageVieProfessionnelle img, .ImageLogement img, .ImageHandicap img, .ImageAccident img {
+        max-width: 100px; /* Réduit la taille des images sur mobile */
+        height: auto; /* Garde les proportions */
+    }
 }
 
 .TitresServices {
-    background-color: #141455;
-    color: white;
-    padding-bottom: 5px;
+    background-color: #141455; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    flex-basis: 100%; /* Force le h2 à prendre 100% de la largeur */
+    text-align: center; /* Centre le texte */
+    margin: 0; /* Supprime les marges */
+}
+
+/* Responsive : Réduction de la taille de police sur petits écrans */
+@media (max-width: 480px) {
+    .TitresServices {
+        font-size: 18px; /* Taille réduite pour mobiles */
+    }
 }
 
 .ImageViePersonnelle {
-    background-color: lightpink;
+    background-color: lightpink; /* Couleur de fond */
+}
+
+.ImageViePersonnelle:hover {
+    background-color: #e3e3f1; /* Couleur de fond au survol */
 }
 
 .ImageVieProfessionnelle {
-    background-color: lightskyblue;
+    background-color: lightskyblue; /* Couleur de fond */
+}
+
+.ImageVieProfessionnelle:hover {
+    background-color: #e3e3f1; /* Couleur de fond au survol */
 }
 
 .ImageLogement {
-    background-color: #EFE3D3;
+    background-color: #EFE3D3; /* Couleur de fond */
+}
+
+.ImageLogement:hover {
+    background-color: #e3e3f1; /* Couleur de fond au survol */
 }
 
 .ImageHandicap {
-    background-color: rgb(233, 231, 138);
+    background-color: #e9e78a; /* Couleur de fond */
+}
+
+.ImageHandicap:hover {
+    background-color: #e3e3f1; /* Couleur de fond au survol */
 }
 
 .ImageAccident {
-    background-color: #6fdfc3;
+    background-color: #6fdfc3; /* Couleur de fond */
 }
 
-/* ACTIONS */
+.ImageAccident:hover {
+    background-color: #e3e3f1; /* Couleur de fond au survol */
+}
+
+/*===================================
+  ACTIONS
+===================================*/
 
 .divActions {
-    margin: 30px 20px 0 20px;
-    padding: 5px 20px 10px 20px;
-    border: none;
-    background-color: #e3e3f1;
-    box-shadow: 10px 10px 20px grey; /*ombre portée des informations*/
-    border-radius: 15px; /*bords arrondis*/
+    margin: 30px 20px 0 20px; /* Marge autour de la div */
+    max-width: calc(100% - 40px); /* S'adapte à la largeur de l'écran */
+    padding: 5px 20px 10px 20px; /* Espace interne */
+    border: none; /* Pas de bordure */
+    background-color: #e3e3f1; /* Couleur de fond */
+    box-shadow: 10px 10px 20px grey; /* Ombre portée */
+    border-radius: 15px; /* Bords arrondis */
+    box-sizing: border-box; /* Inclut padding et border dans la width */
+}
+
+/* Responsive : Réduction des marges sur petits écrans */
+@media (max-width: 768px) {
+    .divActions {
+        margin: 20px 15px 0; /* Marges réduites pour tablettes */
+        padding: 10px 15px; /* Padding réduit */
+    }
+}
+
+@media (max-width: 480px) {
+    .divActions {
+        margin: 15px 10px 0; /* Marges réduites pour mobiles */
+        padding: 8px 10px; /* Padding réduit */
+    }
 }
 
 .Actions {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Utilise Flexbox */
+    gap: 20px; /* Espace entre les boutons */
+    justify-content: center; /* Centre les boutons horizontalement */
+    align-items: center; /* Aligne verticalement les boutons */
+    flex-wrap: wrap; /* Permet le passage à la ligne sur petits écrans */
+}
+
+/* Responsive : Réduction du gap sur petits écrans */
+@media (max-width: 480px) {
+    .Actions {
+        gap: 10px; /* Gap réduit pour mobiles */
+        flex-direction: column; /* Empile les boutons verticalement */
+    }
 }
 
 .ButtonsActions {
-    padding-top: 15px;
-    width: 250px;
-    background-color:#141455;
-    border: none;
-    border-radius: 50px;
-    color: white;
+    padding: 15px 10px; /* Espace interne du bouton */
+    width: 250px; /* Largeur du bouton */
+    max-width: 100%; /* S'adapte à la largeur disponible */
+    background-color: #141455; /* Couleur de fond */
+    border: none; /* Pas de bordure */
+    border-radius: 50px; /* Bords très arrondis */
+    color: white; /* Couleur du texte */
+    box-sizing: border-box; /* Inclut padding et border dans la width */
+    cursor: pointer; /* Change le curseur au survol */
 }
 
-/*MAGASINE*/
+/* Responsive : Boutons prennent toute la largeur sur mobile */
+@media (max-width: 480px) {
+    .ButtonsActions {
+        width: 100%; /* Prend toute la largeur disponible */
+    }
+}
+
+.ButtonsActions:hover {
+    background-color: white; /* Couleur de fond au survol */
+    color: #141455; /* Couleur du texte au survol */
+}
+
+/*===================================
+  MAGASINE
+===================================*/
 
 .divMagasine {
-    margin: 30px 20px 0 20px;
-    padding: 5px 20px 10px 20px;
-    border: none;
-    background-color: #e3e3f1;
-    box-shadow: 10px 10px 20px grey; /*ombre portée des informations*/
-    border-radius: 15px; /*bords arrondis*/
+    margin: 30px 20px 0 20px; /* Marge autour de la div */
+    max-width: calc(100% - 40px); /* S'adapte à la largeur de l'écran */
+    padding: 5px 20px 10px 20px; /* Espace interne */
+    border: none; /* Pas de bordure */
+    background-color: #e3e3f1; /* Couleur de fond */
+    box-shadow: 10px 10px 20px grey; /* Ombre portée */
+    border-radius: 15px; /* Bords arrondis */
+    box-sizing: border-box; /* Inclut padding et border dans la width */
+}
+
+/* Responsive : Réduction des marges sur petits écrans */
+@media (max-width: 768px) {
+    .divMagasine {
+        margin: 20px 15px 0; /* Marges réduites pour tablettes */
+        padding: 10px 15px; /* Padding réduit */
+    }
+}
+
+@media (max-width: 480px) {
+    .divMagasine {
+        margin: 15px 10px 0; /* Marges réduites pour mobiles */
+        padding: 8px 10px; /* Padding réduit */
+    }
 }
 
 .PresentationMagasine {
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
+    background-color: white; /* Couleur de fond */
+    border-radius: 10px; /* Bords arrondis */
+    padding: 15px; /* Espace interne */
+}
+
+/* Responsive : Réduction du padding sur petits écrans */
+@media (max-width: 480px) {
+    .PresentationMagasine {
+        padding: 10px; /* Padding réduit pour mobiles */
+    }
 }
 
 .CategorieMagasine {
-    background-color: #141455;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
-    display: block;
-    margin: 10 auto;
+    background-color: #141455; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bords arrondis */
+    padding: 5px; /* Espace interne */
+    width: 200px; /* Largeur du bouton */
+    max-width: 100%; /* S'adapte à la largeur disponible */
+    text-align: center; /* Centre le texte */
+    display: block; /* Affichage en bloc */
+    margin: 0 auto 20px; /* Centre le bouton et ajoute une marge en bas */
+    box-sizing: border-box; /* Inclut padding et border dans la width */
+}
+
+/* Responsive : Bouton prend toute la largeur sur mobile */
+@media (max-width: 480px) {
+    .CategorieMagasine {
+        width: 100%; /* Prend toute la largeur disponible */
+    }
 }
 
 .ImageMagasine {
-    margin: 0 auto;
-    display: block;
-    border-radius: 5px;
+    margin: 0 auto; /* Centre l'image */
+    display: block; /* Affichage en bloc */
+    border-radius: 5px; /* Bords arrondis */
+    max-width: 100%; /* L'image ne dépasse pas son conteneur */
+    height: auto; /* Garde les proportions */
 }
 
 .LogoArticle {
-    display: flex;
-    align-items: center;
-    background-color: #e3e3f1;
-    width: 150px;
-    height: 50px;
-    margin-top: 10px;
-    padding: 5px;
-    border-radius: 5px;
+    display: flex; /* Utilise Flexbox */
+    align-items: center; /* Aligne verticalement les éléments */
+    background-color: #e3e3f1; /* Couleur de fond */
+    width: 150px; /* Largeur du logo */
+    max-width: 100%; /* S'adapte à la largeur disponible */
+    height: 50px; /* Hauteur du logo */
+    margin-top: 10px; /* Marge en haut */
+    padding: 5px; /* Espace interne */
+    border-radius: 5px; /* Bords arrondis */
+    gap: 10px; /* Espace entre l'image et le texte */
+    box-sizing: border-box; /* Inclut padding et border dans la width */
+}
+
+/* Responsive : Ajustement sur petits écrans */
+@media (max-width: 480px) {
+    .LogoArticle {
+        width: 120px; /* Largeur réduite pour mobiles */
+        height: 40px; /* Hauteur réduite */
+    }
 }
 
 .ImageLogoArticle {
-    width: 40px;
-    height: 40px;
+    width: 40px; /* Largeur de l'image */
+    height: 40px; /* Hauteur de l'image */
+    flex-shrink: 0; /* Empêche l'image de rétrécir */
+}
+
+/* Responsive : Réduction de la taille de l'image sur mobile */
+@media (max-width: 480px) {
+    .ImageLogoArticle {
+        width: 30px; /* Largeur réduite pour mobiles */
+        height: 30px; /* Hauteur réduite */
+    }
 }
 
 .TitreArticle {
-    background-color: #141455;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
+    background-color: #141455; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bords arrondis */
+    padding: 10px; /* Espace interne */
+}
+
+/* Responsive : Réduction du padding sur petits écrans */
+@media (max-width: 480px) {
+    .TitreArticle {
+        padding: 8px; /* Padding réduit pour mobiles */
+        font-size: 18px; /* Taille de police réduite */
+    }
 }
 
 .TexteArticle {
-    background-color: #e3e3f1;
-    border: none;
-    border-radius: 5px;
+    background-color: #e3e3f1; /* Couleur de fond */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bords arrondis */
 }
 
-/*QUESTIONS*/
+.DecouvrirMag, .BoutonQuestions {
+    font-family: "Oswald", sans-serif; /* Police */
+    font-weight: 600; /* Poids de la police */
+    font-size: 25px; /* Taille de la police */
+    padding: 10px; /* Espace interne */
+    border: none; /* Pas de bordure */
+    background-color: #141455; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border-radius: 15px; /* Bords arrondis */
+    display: block; /* Affichage en bloc */
+    margin: 10px auto 0; /* Centre le bouton avec marge en haut */
+    max-width: 300px; /* Largeur maximale */
+    width: 100%; /* Prend toute la largeur disponible */
+    cursor: pointer; /* Change le curseur au survol */
+    box-sizing: border-box; /* Inclut padding et border dans la width */
+}
 
+/* Responsive : Adaptation sur différents écrans */
+@media (max-width: 768px) {
+    .DecouvrirMag, .BoutonQuestions {
+        font-size: 22px; /* Taille réduite pour tablettes */
+        max-width: 250px; /* Largeur max réduite */
+    }
+}
+
+@media (max-width: 480px) {
+    .DecouvrirMag, .BoutonQuestions {
+        font-size: 20px; /* Taille réduite pour mobiles */
+        padding: 8px; /* Padding réduit */
+        max-width: 100%; /* Prend toute la largeur disponible */
+    }
+}
+
+.DecouvrirMag:hover, .BoutonQuestions:hover {
+    background-color: #e3e3f1; /* Couleur de fond au survol */
+    color: #141455; /* Couleur du texte au survol */
+}
+
+/*===================================
+  QUESTIONS
+===================================*/
+
+.divQuestions {
+    margin: 30px 20px 0 20px; /* Marge autour de la div */
+    max-width: calc(100% - 40px); /* S'adapte à la largeur de l'écran */
+    padding: 5px 20px 20px 20px; /* Espace interne */
+    border: none; /* Pas de bordure */
+    background-color: #e3e3f1; /* Couleur de fond */
+    box-shadow: 10px 10px 20px grey; /* Ombre portée */
+    border-radius: 15px; /* Bords arrondis */
+    box-sizing: border-box; /* Inclut padding et border dans la width */
+}
+
+/* Responsive : Réduction des marges sur petits écrans */
+@media (max-width: 768px) {
+    .divQuestions {
+        margin: 20px 15px 0; /* Marges réduites pour tablettes */
+        padding: 10px 15px 15px; /* Padding réduit */
+    }
+}
+
+@media (max-width: 480px) {
+    .divQuestions {
+        margin: 15px 10px 0; /* Marges réduites pour mobiles */
+        padding: 8px 10px 10px; /* Padding réduit */
+    }
+}
+
+.FaqQuestion {
+    background-color: #141455; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border-radius: 5px; /* Bords arrondis */
+    padding: 10px; /* Espace interne */
+    cursor: pointer; /* Change le curseur au survol */
+    transition: background-color 0.3s ease; /* Transition douce */
+}
+
+/* Responsive : Réduction du padding sur petits écrans */
+@media (max-width: 480px) {
+    .FaqQuestion {
+        padding: 8px; /* Padding réduit pour mobiles */
+        font-size: 16px; /* Taille de police réduite */
+    }
+}
+
+.FaqQuestion:hover {
+    background-color: #e3e3f1; /* Couleur de fond au survol */
+    color: #141455; /* Couleur du texte au survol */
+}
+
+.FaqReponse {
+    display: none; /* Cachée par défaut */
+    background-color: #e3e3f1; /* Couleur de fond */
+    padding: 10px; /* Espace interne */
+    border-radius: 5px; /* Bords arrondis */
+    margin-top: 5px; /* Marge en haut */
+}
+
+/* Responsive : Réduction du padding sur petits écrans */
+@media (max-width: 480px) {
+    .FaqReponse {
+        padding: 8px; /* Padding réduit pour mobiles */
+        font-size: 14px; /* Taille de police réduite */
+    }
+}
