@@ -231,6 +231,7 @@ header { /*Propriétés de l'en-tête*/
     padding: 10px 0 10px 0 ; /*marge autour de la grille*/
     box-shadow: 10px 10px 10px rgb(192, 83, 83); /*ombre portée de la grille*/
     border-radius: 15px; /*bords arrondis*/
+    padding: 10px;
 }
 
 .grid-item{ /*cellules de la grille*/
@@ -260,6 +261,7 @@ header { /*Propriétés de l'en-tête*/
     margin: 30px 0 10px 0 ; /*marge autour de la grille*/
     box-shadow: 10px 10px 10px rgb(192, 83, 83); /*ombre portée de la grille*/
     border-radius: 15px; /*bords arrondis*/
+    padding: 10px;
 }
 
 /*PROJET 3 : AMELIORATION SITE CAF - En construction*/
@@ -272,6 +274,7 @@ header { /*Propriétés de l'en-tête*/
     margin: 30px 0 10px 0 ; /*marge autour de la grille*/
     box-shadow: 10px 10px 10px rgb(192, 83, 83); /*ombre portée de la grille*/
     border-radius: 15px; /*bords arrondis*/
+    padding: 10px;
 }
 
 /***************COMPETENCES ET OUTILS UTILISES******************/
