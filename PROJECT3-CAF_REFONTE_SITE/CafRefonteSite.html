@@ -27,11 +27,62 @@
         <img width="35" height="35" src="https://img.icons8.com/color/48/closed-eye.png" alt="closed-eye"/>
     </button>
 
+    <button class="Recherche">
+        <img width="35" height="35" src="https://img.icons8.com/stickers/100/search.png" alt="search"/>
+    </button>
+
     <button class="Connexion">
         <img width="35" height="35" src="Image - SeConnecter.png" alt="circled-user"/>
     </button>
 
-    <button class="Recherche"><img width="35" height="35" src="https://img.icons8.com/stickers/100/search.png" alt="search"/></button>
+    <div class="PopUp">
+
+        <div class="ContenuPopUp">
+
+            <span class="Fermer">&times;</span>
+
+            <h2 class="TitrePopUp">
+                CONNEXION ALLOCATAIRE
+            </h2>
+
+            <form action="FormulaireContact">
+
+                <h3>Avec vos identifiants Caf</h3>
+
+                <h4>Tous les champs sont obligatoires, sauf mention du contraire.</h4>
+
+                <label for="NumSecuSociale">
+                    Numéro de sécurité sociale :
+                </label>
+                <br>
+                <input type="text" class="NumSecuSociale" name="NumSecuSociale" pattern="[0-9]*" maxlength="13" placeholder="Numéro de sécurité sociale" inputmode="numeric" required>
+                <br>
+
+                <label for="MotDePasse">
+                    Mot de passe :
+                </label>
+                <br>
+                <input type="password" class="MotDePasse" name="MotDePasse" minlength="8" maxlength="64" required>
+                <br>
+
+                <button>Se connecter</button>
+
+                <h3>OU</h3>
+
+                <h3>Avec FranceConnect</h3>
+
+                <p>FranceConnect est une solution proposée par l'Etat pour sécuriser et simplifier la connexion à vos services en ligne.</p>*
+
+                <button>
+                    <img src="Images/" alt="">
+                </button>
+                
+            </form>
+
+            h2
+        </div>
+
+    </div>
         
 </header>
 
