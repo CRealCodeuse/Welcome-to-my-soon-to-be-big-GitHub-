@@ -42,24 +42,35 @@ header { /*Propriétés de l'en-tête*/
     border-radius: 10px; /*bords arrondis*/
 }
 
+/*Responsive : Réduction de la taille sur petits écrans */
+@media (max-width: 768px) {
+    header {
+        margin: 15px 10px;
+        padding: 10px; 
+    }
+}
+
+/*Responsive : Réduction de la taille sur petits écrans */
+@media (max-width: 480px) {
+    header {
+        margin: 10px 10x;
+        padding: 2px; 
+    }
+}
+
 .NomPrenom { /*Nom et prénom dans l'en-tête*/
     font-family: "Oswald", sans-serif; /*police et style d'écriture*/
     font-weight: 800; /*Epaisseur de police*/
     font-style: normal; /*Style de police*/
 }
 
-/*Responsive : Réduction de la taille sur petits écrans */
-@media (max-width: 768px) {
-    header {
-        
-    }
-}
+
 
 .HeadButtons {
     display:flex;
     justify-content: space-between; /* Un à gauche, un à droite */
     align-items: center; /* Centre verticalement */
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     padding: 0 20px; /* Espacement sur les côtés */
 }
 
@@ -70,7 +81,6 @@ header { /*Propriétés de l'en-tête*/
 }
 
 .BoutonContact {
-    padding: 5px;
     border: 2px solid black;
     font-family: "Oswald", sans-serif;
     font-size: 20px;
@@ -96,7 +106,7 @@ header { /*Propriétés de l'en-tête*/
 
 .ContenuPopUp {
     background-color: white;
-    margin: 5% auto;
+    margin: 10% auto;
     padding: 30px;
     border-radius: 10px;
     width: 90%;
@@ -107,7 +117,7 @@ header { /*Propriétés de l'en-tête*/
 
 .Fermer {
     position: absolute;
-    right: 20px;
+    right: 35px;
     top: 15px;
     font-size: 30px;
     font-weight: bold;
@@ -136,13 +146,14 @@ header { /*Propriétés de l'en-tête*/
 
 .FormulaireContact button {
     margin-top: 20px;
-    padding: 12px 30px;
+    padding: 10px 15px;
     background-color:#e09095;
-    color: white;
+    font-family: "Oswald", sans-serif;
+    color: black;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .FormulaireContact button:hover {
@@ -182,6 +193,8 @@ header { /*Propriétés de l'en-tête*/
     display: flex;
     align-items: center;
     gap : 30px;
+    display: flex; /*Utilisation de Flexbox*/
+    flex-direction: column; /* Empilement vertical */
 }
 
 .PhotoElisePortfolio {
@@ -193,6 +206,23 @@ header { /*Propriétés de l'en-tête*/
     border:black 3px solid;
     margin: 15px 0 15px 0;
     
+}
+
+/* Responsive : Réduction des marges sur petits écrans */
+@media (max-width: 768px) {
+    .photoElisePortfolio {
+        margin: 15px 10px; /* Marges réduites pour tablettes */
+        padding: 10px; /* Padding réduit */
+    }
+}
+
+/* Responsive : Réduction des marges sur petits écrans */
+@media (max-width: 480px) {
+    .photoElisePortfolio {
+        border: none;
+        margin: 0;
+        
+    }
 }
 
 .TitreBienvenue {
