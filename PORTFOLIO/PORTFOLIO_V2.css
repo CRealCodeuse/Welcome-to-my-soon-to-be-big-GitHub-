@@ -64,8 +64,6 @@ header { /*Propriétés de l'en-tête*/
     font-style: normal; /*Style de police*/
 }
 
-
-
 .HeadButtons {
     display:flex;
     justify-content: space-between; /* Un à gauche, un à droite */
@@ -179,17 +177,27 @@ header { /*Propriétés de l'en-tête*/
     padding-right: 5px;
 }
 
-/***********************************BODY**************************************/
+/*RESPONSIVE BOUTONCONTACT ET ENGLISH*/
+
+@media (max-width:480px){
+    .BoutonContact, .English {
+        text-decoration: none;
+        color:black;
+    }
+}
+
+/********************PRESENTATION PORTFOLIO*********************/
 
 
 .divPresentation { /*Présentation générale*/
-    background-color: #fff3f3; /*couleur de fond de la présentation*/
+    background-color:#f1aaaf; /*couleur de fond de la présentation*/
     margin: 0 20px 0 20px; /*marge autour de la présentation*/
     padding: 0 20px 0 20px ; /*espace autour du texte*/
     border: 3px solid darkgrey; /*bordure de la présentation*/
     box-shadow: 10px 10px 20px grey; /*ombre portée de la présentation*/
     border-radius: 15px; /*bords arrondis*/
-    display: flex;
+    display: grid;
+    grid-template-columns: 2;
     align-items: center;
     gap : 30px;
     
@@ -213,6 +221,7 @@ header { /*Propriétés de l'en-tête*/
     border-radius: 60px;
     border:black 3px solid;
     margin: 10px 0 15px 0;
+    column-span: 1;
     
 }
 
@@ -233,27 +242,89 @@ header { /*Propriétés de l'en-tête*/
     }
 }
 
+.presentation{ /*Texte de la présentation générale*/
+    text-align: left; /*alignement du texte*/
+    padding: 0 0; /*espace autour du texte*/
+    margin: 15px 0;
+    grid-column-start: 2;
+}
+
 .TitreBienvenue {
-    background-color: #f1aaaf;
+    background-color: whitesmoke;
     padding: 5px;
     width: fit-content;
     border-radius: 5px;
 }
 
-.presentation{ /*Texte de la présentation générale*/
-    text-align: left; /*alignement du texte*/
-    padding: 0 0; /*espace autour du texte*/
-    margin: 15px 0;
+.TexteBienvenue {
+    background-color: whitesmoke;
+    padding: 15px;
+    border-radius: 10px;
 }
 
-/*Grande grille*/
+/**********TITRES MES PROJETS ET CE QUE J'UTILISE***********/
+
+.GrandsTitresh2{ 
+    margin: 15px 0 20px 50px ; /*marge autour du titre*/
+}
+
+/***********************TOUS LES PROJETS*********************/
+
+.divProjets{
+    background-color: #f6b1b1; /*couleur de fond de la grille*/
+    padding: 10px 0; /*marge autour de la grille*/
+    box-shadow: 10px 10px 10px rgb(192, 83, 83); /*ombre portée de la grille*/
+    border-radius: 15px; /*bords arrondis*/
+    margin:25px;
+    padding: 20px;
+}
 
 .TitreProjet {
     padding:15px;
-    width: 80%;
+    background-color: whitesmoke;
     text-align: center;
-    justify-content: center;
+    width: 50%;
+    margin: 15px auto 30px auto;
 }
+
+@media (max-width:480px) {
+    .divProjets {
+        display: flex; /*Utilisation de Flexbox*/
+        flex-direction: column; /* Empilement vertical */
+        margin: 15px;
+        padding: 15px;
+
+    }
+}
+
+.divProjetSeul {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start
+}
+
+.ProjetGauche, .ProjetDroite {
+    flex:1;
+}
+
+.ProjetGauche {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ProjetDroite {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+@media (max-width:480px) {
+    .divProjetSeul {
+        flex-direction: column;
+    }
+}
+
+
 
 .TitreProjet:hover {
     color:black; /* Rend le texte transparent pour voir le contour */
@@ -268,13 +339,33 @@ header { /*Propriétés de l'en-tête*/
         width: 90%;
         text-align: center;
         justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        text-decoration: none;
+        color: black;
     }
 }
 
-/*PROJET 1 : PIPOUNES CREATION VERSION */
+.Captures { /*captures d'écran*/
+    width: 100%; /*largeur max*/
+    height: auto; /*hauteur max*/
+    align-self: center; /*alignement de la capture d'écran*/
+    border: black 2px solid; /*bordure de la capture d'écran*/
+    border-radius: 20px; /*bords arrondis de la capture d'écran*/
+    margin-bottom: 20px;
+}
+
+@media (max-width:480px) {
+    .Captures {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        max-width: 100%;
+    }
+}
 
 .ProjetDescription {
-    padding: 0 15px 0 15px;
+    padding: 0 30px 0 30px;
 }
 
 @media (max-width:480px) {
@@ -285,89 +376,58 @@ header { /*Propriétés de l'en-tête*/
     }
 }
 
-.divProjets{ /*Projet 1*/
-    display: grid; /*disposition en grille*/
-    grid-template-columns: 50% 50%; /*taille des colonnes*/
-    grid-template-rows: flex flex; /*la grille s'adapte à la taille du plus grand des items*/
-    background-color: #f6b1b1; /*couleur de fond de la grille*/
-    padding: 10px 0; /*marge autour de la grille*/
-    box-shadow: 10px 10px 10px rgb(192, 83, 83); /*ombre portée de la grille*/
-    border-radius: 15px; /*bords arrondis*/
-    margin:25px;
-    
-}
-
-@media (max-width:480px) {
-    .divProjets {
-        display: flex; /*Utilisation de Flexbox*/
-        flex-direction: column; /* Empilement vertical */
-        margin: 15px;
-        padding: 15px;
-
-    }
-}
-
-.grid-item{ /*cellules de la grille*/
-    width: flex; /*largeur des éléments dans chaque cellule*/
-    height: flex; /*hauteur des éléments dans chaque cellule*/
-    
-}
-
-.Captures { /*capture d'écran de Pipounes Création*/
-    max-width: 100%; /*largeur max*/
-    height: auto; /*hauteur max*/
-    align-self: center; /*alignement de la capture d'écran*/
-    border: black 2px solid; /*bordure de la capture d'écran*/
-    border-radius: 20px; /*bords arrondis de la capture d'écran*/
-    margin-top: 20px; 
-    margin-bottom: 20px;
-}
-
 /***************COMPETENCES ET OUTILS UTILISES******************/
 
-.Titresh2{ /*Titre au dessus des compétences et outils utilisés*/
-    margin: 15px 0 20px 20px ; /*marge autour du titre*/
-}
-
 .divCompetencesOutils{ /*Compétences et outils utilisés*/
-    display: grid; /*disposition en grille*/
-    grid-template-columns: 50% 50%; /*taille des colonnes*/
-    grid-template-rows: flex flex; /*la grille s'adapte à la taille du plus grand des items*/
-    background-color: #fff3f3; /*couleur de fond de la grille*/
+    display: flex; /*disposition en grille*/
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color:#f1aaaf; /*couleur de fond de la grille*/
     margin: 25px ; /*marge autour de la grille*/
     padding: 0 15px 0 15px;
     border: 2px solid darkgrey;
     box-shadow: 10px 10px 20px grey;
-    border-radius: 15px;
-    gap: 10px;
+    border-radius: 15px;    
 }
 
 @media (max-width:480px) {
     .divCompetencesOutils {
         display: flex; /*Utilisation de Flexbox*/
         flex-direction: column; /* Empilement vertical */
-        margin: 15px;
+        margin: 0;
         padding: 15px;
+
     }
 
     .divCompetencesOutils .ProjetDescription{
         padding-top: 0px;
     }
+
+    .TitreBienvenue, .TitreOutils {
+        margin:0;
+    }
 }
 
+.divCompetences, .divOutilsInformatiques {
+    border: none;
+    flex: 1;
+    min-width: 300px;
+    
+}
 
-.TitreCompetences {
-    background-color: #f1aaaf;
+.TitreCompetences, TitreOutils {
+    background-color: white;
     padding: 10px;
     width: fit-content;
     border-radius: 5px;
+    color: black;
 }
 
-.TitreOutils {
-    background-color: #f1aaaf;
-    padding: 10px;
-    width: fit-content;
-    border-radius: 5px;
+.CompetencesOutils {
+    background-color: whitesmoke ;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
 }
 
 /***********************************FOOTER**************************************/
