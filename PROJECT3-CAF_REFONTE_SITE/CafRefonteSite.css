@@ -841,7 +841,7 @@ header {
 @media (max-width: 480px) {
     .FaqQuestion {
         padding: 8px; /* Padding réduit pour mobiles */
-        font-size: 16px; /* Taille de police réduite */
+        font-size: 18px; /* Taille de police réduite */
     }
 }
 
